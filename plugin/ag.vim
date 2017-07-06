@@ -18,17 +18,17 @@ else
 	endif
 endif
 
-if executable('ag')
-	let prg = &grepprg
-	set grepprg&
-	if prg ==# &grepprg
-		set grepformat=%f:%l:%c:%m
-		let &grepprg = g:ctrlp_ag_filter . 'ag --vimgrep --hidden $*'
-	else
-		let &grepprg = prg
-	endif
-
-	if !exists('g:ctrlp_user_command')
-		let g:ctrlp_user_command = g:ctrlp_ag_filter . 'ag %s --nocolor --nogroup --hidden -g ""'
-	endif
-endif
+" if executable('ag')
+" 	let prg = &grepprg
+" 	set grepprg&
+" 	if prg ==# &grepprg
+" 		set grepformat=%f:%l:%c:%m
+" 		let &grepprg = g:ctrlp_ag_filter . 'ag --vimgrep --hidden $*'
+" 	else
+" 		let &grepprg = prg
+" 	endif
+"
+" 	if !exists('g:ctrlp_user_command')
+" 		let g:ctrlp_user_command = g:ctrlp_ag_filter . 'ag %s --nocolor --nogroup --hidden -g ""'
+" 	endif
+" endif
